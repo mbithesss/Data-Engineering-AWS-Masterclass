@@ -7,7 +7,7 @@ from botocore.exceptions import ClientError
 
 
 # s3 bucket details
-bucket_name = os.getenv("BUCKET_NAME")
+bucket_name = 'de-masterclass'
 
 
 def write_data_to_s3(dataframe, bucket_name, key):
