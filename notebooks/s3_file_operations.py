@@ -26,3 +26,30 @@ def write_data_to_s3(dataframe, bucket_name, key):
     except ClientError as e:
         print(e)
         return False
+
+
+
+# Defining the function to read the CSV file from S3
+def read_csv_from_s3(bucket_name, key):
+    # Creating an S3 client object
+    s3 = boto3.client('s3')
+
+    try:
+        # Retrieving the file object from S3
+        df_file = s3.get_object(Bucket=bucket_name, Key=key)
+        
+        # Check if the file is empty
+        if df_file['ContentLength'] == 0:
+            print(f"The file {key} is empty. Skipping.")
+            return pd.DataFrame()  # Return an empty DataFrame
+        
+        # Reading the CSV data into a pandas dataframe
+        df = pd.read_csv(df_file['Body'])
+        return df
+
+    except ClientError as e:
+        print(e)
+        return False
+    except pd.errors.EmptyDataError:
+        print(f"The file {key} is empty. Skipping.")
+        return pd.DataFrame()  # Return an empty DataFrame
