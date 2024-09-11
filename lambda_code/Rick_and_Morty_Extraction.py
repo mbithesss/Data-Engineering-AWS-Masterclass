@@ -9,6 +9,7 @@ def extract_data(api_url, table_name):
     next = True
     all_data = []
 
+
     while next:
         print(f"Extracting page {page} Data from {table_name}.....")
         response = requests.get(f"{api_url}?page={str(page)}")
