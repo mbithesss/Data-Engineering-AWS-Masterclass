@@ -119,6 +119,3 @@ Now that we have set up our S3 bucket and RDS instance, we need to create three 
 3. **Invoke the Loading Lambda Function**: Test the loading function to ensure it reads the transformed data from S3 and loads it into the RDS instance.
 
 By following these steps, you will have a fully functional data pipeline that extracts data from an API, transforms it, and loads it into a MySQL database on AWS RDS. This setup will help you understand the end-to-end process of building a data engineering solution on AWS.
-
-
-**Note**: REMEMBER TO TEAR DOWN ALL AWS SERVICES CREATED ONCE YOU HAVE TESTED AND DOCUMENTED EVERYTHING TO AVOID EXTRA COSTS.
