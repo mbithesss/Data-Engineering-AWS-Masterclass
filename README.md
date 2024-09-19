@@ -4,6 +4,8 @@ This project demonstrates my journey through the **Data Engineering with AWS Mas
 
 The project centers on extracting data from the **Rick and Morty series API**, performing necessary transformations, and loading the processed data into a MySQL database hosted on AWS RDS.
 
+Link to API: https://rickandmortyapi.com/api
+
 ## Key Learning Outcomes
 
 1. Designing and architecting a real-world data platform on AWS.
@@ -16,6 +18,10 @@ The project centers on extracting data from the **Rick and Morty series API**, p
 ---
 
 ## Workload Breakdown
+
+### Data Flow Diagram
+
+![alt text](image.png)
 
 ### 1. Data Ingestion
 
