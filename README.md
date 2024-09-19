@@ -6,6 +6,16 @@ The project centers on extracting data from the **Rick and Morty series API**, p
 
 Link to API: https://rickandmortyapi.com/api
 
+There are currently three available resources:
+
+Character: used to get all the characters.
+Location: used to get all the locations.
+Episode: used to get all the episodes.
+
+### Entity Relational Diagram
+
+![alt text](image-1.png)
+
 ## Key Learning Outcomes
 
 1. Designing and architecting a real-world data platform on AWS.
